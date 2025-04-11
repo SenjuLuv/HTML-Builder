@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Constructor</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="constructor">
+      <div class="sidebar">
+        <h2>Elements</h2>
+        <div class="add-element-form">
+          <input type="text" id="elementName" placeholder="Enter element name..." class="element-input">
+          <select id="elementType" class="element-select">
+            <option value="div">div - Container</option>
+            <option value="p">p - Paragraph</option>
+            <option value="span">span - Inline text</option>
+            <option value="h1">h1 - Main heading</option>
+            <option value="h2">h2 - Subheading</option>
+            <option value="h3">h3 - Section heading</option>
+            <option value="button">button - Click button</option>
+            <option value="input">input - Text input</option>
+            <option value="textarea">textarea - Multi-line input</option>
+          </select>
+          <button onclick="addCustomElement()" class="add-btn">+ Add New Element</button>
+        </div>
+        <div class="elements-list">
+          <div class="element" draggable="true" data-type="heading">Heading</div>
+          <div class="element" draggable="true" data-type="paragraph">Paragraph</div>
+          <div class="element" draggable="true" data-type="button">Button</div>
+          <div class="element" draggable="true" data-type="input">Input Field</div>
+        </div>
+      </div>
+      <div class="preview">
+        <h2>Preview</h2>
+        <div id="drop-zone" class="drop-zone"></div>
+      </div>
+      <div class="style-editor">
+        <h2>Styles</h2>
+        <div class="style-controls">
+          <div class="style-group">
+            <label>Text Color</label>
+            <input type="color" id="textColor" class="style-input">
+          </div>
+          <div class="style-group">
+            <label>Background Color</label>
+            <input type="color" id="bgColor" class="style-input">
+          </div>
+          <div class="style-group">
+            <label>Font Size (px)</label>
+            <input type="number" id="fontSize" class="style-input" min="8" max="72" value="16">
+          </div>
+          <div class="style-group">
+            <label>Padding (px)</label>
+            <input type="number" id="padding" class="style-input" min="0" max="100" value="0">
+          </div>
+          <div class="style-group">
+            <label>Border Radius (px)</label>
+            <input type="number" id="borderRadius" class="style-input" min="0" max="50" value="0">
+          </div>
+          <div class="style-group">
+            <label>Border Width (px)</label>
+            <input type="number" id="borderWidth" class="style-input" min="0" max="20" value="0">
+          </div>
+          <div class="style-group">
+            <label>Border Color</label>
+            <input type="color" id="borderColor" class="style-input">
+          </div>
+          <div class="style-group">
+            <label>Text Alignment</label>
+            <select id="textAlign" class="style-input">
+              <option value="left">Left</option>
+              <option value="center">Center</option>
+              <option value="right">Right</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
